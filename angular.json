@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portfolio-matt": {
+    "bfh_sem5_eweb_portfolio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "portfolio-matt:build:production"
+              "buildTarget": "bfh_sem5_eweb_portfolio:build:production"
             },
             "development": {
-              "buildTarget": "portfolio-matt:build:development"
+              "buildTarget": "bfh_sem5_eweb_portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
