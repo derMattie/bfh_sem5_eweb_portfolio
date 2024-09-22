@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import "variables";
+
+html,
+body {
+  height: 100%;
+  overflow-y: auto;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.content-container {
+  padding: 15px 10%;
+  overflow-y: auto;
+}
+
+h1 {
+  color: $mx-primary;
+  text-align: center;
+}
+
+h2 {
+  color: $mx-primary;
+}
