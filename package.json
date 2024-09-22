@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href /bfh_sem5_eweb_portfolio/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "postbuild": "move docs\\browser\\* docs\\ && rmdir /s /q docs\\browser"
   },
   "private": true,
   "dependencies": {
