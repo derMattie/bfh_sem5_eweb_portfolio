@@ -1,0 +1,23 @@
+@import "../../variables";
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  img {
+    width: 20vw;
+    margin: 15px auto;
+  }
+
+  .btn {
+    width: 200px;
+    margin: 5px auto;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: $mx-border-radius;
+  }
+}

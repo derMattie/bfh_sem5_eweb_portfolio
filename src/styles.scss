@@ -8,16 +8,15 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-align: center;
 }
 
 .content-container {
-  padding: 15px 10%;
   overflow-y: auto;
 }
 
 h1 {
   color: $mx-primary;
-  text-align: center;
 }
 
 h2 {
