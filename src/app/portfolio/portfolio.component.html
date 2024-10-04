@@ -1,8 +1,19 @@
-<div>
-  <h1>Matthias Michel</h1>
-  <h2>since <span>1999</span></h2>
-</div>
+<h1>Matthias Michel</h1>
+<h2>
+  since
+  <app-number-counter
+    [targetNumber]="1999"
+    [startNumber]="1000"
+  ></app-number-counter>
+</h2>
 
+<h1>Laufbahn</h1>
 <div class="carrerpath-container"></div>
 
-<div class="hobby-container"></div>
+<h1>Hobbys</h1>
+<div class="hobby-container">
+  <app-info-card [faInputIcon]="faPersonSwimming"></app-info-card>
+  <app-info-card [faInputIcon]="faSteam"></app-info-card>
+  <app-info-card [faInputIcon]="faSpotify"></app-info-card>
+  <app-info-card [faInputIcon]="faCar"></app-info-card>
+</div>

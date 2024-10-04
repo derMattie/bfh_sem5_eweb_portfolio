@@ -1,25 +1,22 @@
 // Colorpalette
-$mx-primary: #ff5b00;
-$mx-white: #ffffff;
-$mx-gray: #363636;
-$mx-backdrop-gray: #adadad;
-$mx-backdrop-opacity: 0.5; // 50%
-$mx-blue-footer: #010137;
-
-// Generate RGBA color for the backdrop with opacity
-$mx-backdrop-color-opacity: rgba($mx-backdrop-gray, $mx-backdrop-opacity);
-$mx-backdrop-gray-color-opacity: rgba($mx-gray, $mx-backdrop-opacity);
+$accent-primary: #ff5b00;
+$accent-light: #ffffff;
+$text-primary: #ffffff;
+$text-secondary: #000000;
+$backdrop-primary: #1c1c1c;
+$backdrop-component: #272727;
+$backdrop-component-hover: #4d4d4d;
 
 // Border radius
-$mx-border-radius: 10px;
+$border-radius: 10px;
 
-$mx-container-padding: 25px;
-$mx-container-margin: 25px;
+$container-padding: 25px;
+$container-margin: 25px;
 
-$mx-boxshadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7);
+$boxshadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7);
 
-$mx-socials-icon-size: 2rem;
-$mx-socials-icon-margin: 15px;
+$socials-icon-size: 3rem;
+$socials-icon-margin: 15px;
 
 // Transitions
-$mx-hover-transition: 0.2s ease-in-out;
+$hover-transition: 0.2s ease-in-out;

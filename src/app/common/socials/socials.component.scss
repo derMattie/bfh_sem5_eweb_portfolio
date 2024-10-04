@@ -1,7 +1,15 @@
 @import "../../../variables";
 
-a {
-  margin: $mx-socials-icon-margin;
-  font-size: $mx-socials-icon-size;
-  text-decoration: none;
+.social-icons {
+  .social-icon {
+    margin: $socials-icon-margin;
+    font-size: $socials-icon-size;
+    text-decoration: none;
+    color: $accent-light;
+  }
+
+  .social-icon:hover {
+    color: $accent-primary;
+    transition: $hover-transition;
+  }
 }

@@ -4,21 +4,23 @@ html,
 body {
   height: 100%;
   overflow-y: auto;
-}
-body {
+
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   text-align: center;
-}
+  color: $text-primary;
 
-.content-container {
-  overflow-y: auto;
-}
+  background-color: $backdrop-primary;
 
-h1 {
-  color: $mx-primary;
-}
+  .content-container {
+    overflow-y: auto;
+  }
 
-h2 {
-  color: $mx-primary;
+  h1 {
+    color: $text-primary;
+  }
+
+  h2 {
+    color: $text-primary;
+  }
 }

@@ -1,0 +1,20 @@
+@import "../../variables";
+
+.content-container {
+  background-color: $backdrop-component;
+  box-shadow: $boxshadow;
+  width: 50rem;
+  margin: $container-margin;
+  padding: $container-padding;
+  border-radius: $border-radius;
+
+  .card-icon {
+    font-size: 4rem;
+    color: $accent-primary;
+  }
+}
+
+.content-container:hover {
+  transition: $hover-transition;
+  background-color: $backdrop-component-hover;
+}
