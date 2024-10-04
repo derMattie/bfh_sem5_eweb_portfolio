@@ -3,7 +3,14 @@
 .hobby-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  gap: $container-margin;
+  width: 100%;
+}
+
+@media (max-width: $media-medium) {
+  .hobby-container {
+    flex-direction: column;
+  }
 }

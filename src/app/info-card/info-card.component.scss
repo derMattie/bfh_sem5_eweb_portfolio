@@ -3,10 +3,10 @@
 .content-container {
   background-color: $backdrop-component;
   box-shadow: $boxshadow;
-  width: 50rem;
-  margin: $container-margin;
-  padding: $container-padding;
+  padding: $container-padding 0;
   border-radius: $border-radius;
+  min-width: 25rem;
+  flex-grow: 1;
 
   .card-icon {
     font-size: 4rem;
@@ -17,4 +17,11 @@
 .content-container:hover {
   transition: $hover-transition;
   background-color: $backdrop-component-hover;
+}
+
+@media (max-width: $media-medium) {
+  .content-container {
+    border-radius: 0;
+    width: 100%;
+  }
 }
