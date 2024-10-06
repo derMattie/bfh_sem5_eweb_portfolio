@@ -12,8 +12,26 @@
 
 <h1>Hobbys</h1>
 <div class="hobby-container">
-  <app-info-card [faInputIcon]="faPersonSwimming"></app-info-card>
-  <app-info-card [faInputIcon]="faSteam"></app-info-card>
-  <app-info-card [faInputIcon]="faSpotify"></app-info-card>
-  <app-info-card [faInputIcon]="faCar"></app-info-card>
+  <app-info-card [faInputIcon]="faPersonSwimming">
+    <h3>Swimming</h3>
+    <div *ngIf="aareData$ | async as aareData; else showNoAareGuru">
+      <p>Aare in Thun: {{ aareData.aare }}°</p>
+      <p>{{ aareData.text }}</p>
+    </div>
+    <ng-template #showNoAareGuru>
+      <p>Aare Guru nicht verfügbar ☹️</p>
+    </ng-template>
+  </app-info-card>
+
+  <app-info-card [faInputIcon]="faSpotify">
+    <h3>Dj & Producing</h3>
+  </app-info-card>
+
+  <app-info-card [faInputIcon]="faCar">
+    <h3>Driving</h3>
+  </app-info-card>
+
+  <app-info-card [faInputIcon]="faSteam">
+    <h3>Gaming</h3>
+  </app-info-card>
 </div>
