@@ -10,16 +10,33 @@
 <h1>Laufbahn</h1>
 <div class="carrerpath-container"></div>
 
-<h1>Hobbys</h1>
+<h1>Things I like</h1>
 <div class="hobby-container">
   <app-info-card [faInputIcon]="faPersonSwimming">
     <h3>Swimming</h3>
     <div *ngIf="aareData$ | async as aareData; else showNoAareGuru">
       <p>Aare in Thun: {{ aareData.aare }}°</p>
       <p>{{ aareData.text }}</p>
+      <p>Daten von {{ aareData.time * 1000 | date : "dd.MM.yyyy HH:mm" }}</p>
     </div>
+    <p (click)="updateAareData()" title="Refresh">
+      <fa-icon [icon]="faRefresh"></fa-icon>
+    </p>
     <ng-template #showNoAareGuru>
       <p>Aare Guru nicht verfügbar ☹️</p>
+    </ng-template>
+  </app-info-card>
+
+  <app-info-card [faInputIcon]="faMeme">
+    <h3>Memes</h3>
+    <div *ngIf="memeData$ | async as memeData; else showNoMeme">
+      <img class="meme" [src]="memeData.url" [alt]="memeData.description" />
+    </div>
+    <p (click)="updateMemeData()" title="Refresh">
+      <fa-icon [icon]="faRefresh"></fa-icon>
+    </p>
+    <ng-template #showNoMeme>
+      <fa-icon class="spinner fa-2xl" [icon]="faSpinner"></fa-icon>
     </ng-template>
   </app-info-card>
 

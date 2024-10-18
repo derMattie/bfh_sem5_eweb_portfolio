@@ -9,6 +9,23 @@
   width: 100%;
 }
 
+.meme {
+  width: 200px;
+}
+
+.spinner {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: $media-medium) {
   .hobby-container {
     flex-direction: column;

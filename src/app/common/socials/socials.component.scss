@@ -6,10 +6,10 @@
     font-size: $socials-icon-size;
     text-decoration: none;
     color: $accent-light;
+    transition: $hover-transition;
   }
 
   .social-icon:hover {
     color: $accent-primary;
-    transition: $hover-transition;
   }
 }
