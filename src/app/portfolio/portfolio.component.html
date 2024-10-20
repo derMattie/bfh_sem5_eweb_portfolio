@@ -14,7 +14,8 @@
 <div class="hobby-container">
   <app-info-card [faInputIcon]="faPersonSwimming">
     <h3>Swimming</h3>
-    <div *ngIf="aareData$ | async as aareData; else showNoAareGuru">
+    @if (aareData(); as aareData) {
+    <div>
       <p>Aare in Thun: {{ aareData.aare }}°</p>
       <p>{{ aareData.text }}</p>
       <p>Daten von {{ aareData.time * 1000 | date : "dd.MM.yyyy HH:mm" }}</p>
@@ -22,22 +23,23 @@
     <p (click)="updateAareData()" title="Refresh">
       <fa-icon [icon]="faRefresh"></fa-icon>
     </p>
-    <ng-template #showNoAareGuru>
-      <p>Aare Guru nicht verfügbar ☹️</p>
-    </ng-template>
+    } @else{
+    <p>Aare Guru nicht verfügbar ☹️</p>
+    }
   </app-info-card>
 
   <app-info-card [faInputIcon]="faMeme">
     <h3>Memes</h3>
-    <div *ngIf="memeData$ | async as memeData; else showNoMeme">
+    @if(memeData(); as memeData){
+    <div>
       <img class="meme" [src]="memeData.url" [alt]="memeData.description" />
     </div>
     <p (click)="updateMemeData()" title="Refresh">
       <fa-icon [icon]="faRefresh"></fa-icon>
     </p>
-    <ng-template #showNoMeme>
-      <fa-icon class="spinner fa-2xl" [icon]="faSpinner"></fa-icon>
-    </ng-template>
+    } @else {
+    <mat-spinner></mat-spinner>
+    }
   </app-info-card>
 
   <app-info-card [faInputIcon]="faSpotify">
@@ -46,6 +48,11 @@
 
   <app-info-card [faInputIcon]="faCar">
     <h3>Driving</h3>
+    <p>Kilometers driven (estimated)</p>
+    <app-number-counter
+      [targetNumber]="60000"
+      [startNumber]="0"
+    ></app-number-counter>
   </app-info-card>
 
   <app-info-card [faInputIcon]="faSteam">

@@ -1,4 +1,9 @@
-import { Component, inject, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  signal,
+} from '@angular/core';
 import { InfoCardComponent } from '../info-card/info-card.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
@@ -13,18 +18,18 @@ import { Error404Component } from '../error404/error404.component';
 import { NumberCounterComponent } from '../number-counter/number-counter.component';
 import { AareData } from '../external-information/aareguru/aareguru';
 import { AareguruService } from '../external-information/aareguru/aareguru.service';
-import { Observable } from 'rxjs';
-import { CommonModule } from '@angular/common';
+import { firstValueFrom } from 'rxjs';
 import { MemeData } from '../external-information/meme/meme';
 import { MemeService } from '../external-information/meme/meme.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
   imports: [
-    CommonModule,
+    DatePipe,
     FontAwesomeModule,
     InfoCardComponent,
     Error404Component,
@@ -33,46 +38,48 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   ],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PortfolioComponent {
-  private _snackBar = inject(MatSnackBar);
-
+  private readonly snackBar = inject(MatSnackBar);
   private readonly aareService = inject(AareguruService);
   private readonly memeService = inject(MemeService);
 
-  faPersonSwimming = faPersonSwimming;
-  faSteam = faSteam;
-  faSpotify = faSpotify;
-  faCar = faCar;
-  faMeme = faImage;
-  faRefresh = faRefresh;
-  faSpinner = faSpinner;
+  readonly faPersonSwimming = faPersonSwimming;
+  readonly faSteam = faSteam;
+  readonly faSpotify = faSpotify;
+  readonly faCar = faCar;
+  readonly faMeme = faImage;
+  readonly faRefresh = faRefresh;
+  readonly faSpinner = faSpinner;
 
-  aareData$?: Observable<AareData>;
-  memeData$?: Observable<MemeData>;
+  readonly aareData = signal<AareData | null>(null);
+  readonly memeData = signal<MemeData | null>(null);
 
-  ngOnInit() {
+  constructor() {
     this.updateAareData();
-
     this.updateMemeData();
   }
 
-  updateAareData(): void {
-    this.aareData$ = this.aareService.getAareData();
+  async updateAareData(): Promise<void> {
+    this.aareData.set(null);
+    const data = await firstValueFrom(this.aareService.getAareData());
+    this.aareData.set(data);
+
     this.openSnackBar('🌊 Sheesh! The AareGuru Data was updated.');
   }
 
-  updateMemeData(): void {
-    this.memeData$ = this.memeService.getMemeData();
+  async updateMemeData(): Promise<void> {
+    this.memeData.set(null);
+    const data = await firstValueFrom(this.memeService.getMemeData());
+    this.memeData.set(data);
     this.openSnackBar('🫡 Damn Bro! The Meme was updated.');
   }
 
-  private openSnackBar(message: string, duration: number = 7000) {
+  private openSnackBar(message: string, duration: number = 5000) {
     console.log(message);
-    this._snackBar.open(message, undefined, {
+    this.snackBar.open(message, undefined, {
       duration: duration,
-      horizontalPosition: 'end',
-      verticalPosition: 'top',
     });
   }
 }

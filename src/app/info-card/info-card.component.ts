@@ -1,6 +1,6 @@
 import { Component, Input, input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faImage } from '@fortawesome/free-solid-svg-icons';
+import { faImage, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-info-card',
@@ -10,5 +10,5 @@ import { faImage } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './info-card.component.scss',
 })
 export class InfoCardComponent {
-  @Input() faInputIcon = faImage;
+  readonly faInputIcon = input.required<IconDefinition>();
 }
