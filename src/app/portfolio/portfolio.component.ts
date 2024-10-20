@@ -73,6 +73,7 @@ export class PortfolioComponent {
     this.memeData.set(null);
     const data = await firstValueFrom(this.memeService.getMemeData());
     this.memeData.set(data);
+
     this.openSnackBar('🫡 Damn Bro! The Meme was updated.');
   }
 
@@ -80,6 +81,8 @@ export class PortfolioComponent {
     console.log(message);
     this.snackBar.open(message, undefined, {
       duration: duration,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
     });
   }
 }

@@ -15,7 +15,7 @@ $container-margin: 25px;
 
 $boxshadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7);
 
-$socials-icon-size: 3rem;
+$socials-icon-size: 2rem;
 $socials-icon-margin: 15px;
 
 // Transitions
@@ -26,28 +26,3 @@ $media-extralarge: 1600px;
 $media-large: 1000px;
 $media-medium: 600px;
 $media-small: 500px;
-
-$palette: (
-  50: #fce9e6,
-  100: #ffccb8,
-  200: #ffab8a,
-  300: #ff8b5a,
-  400: #ff7134,
-  500: #ff5900,
-  600: #f45300,
-  700: #e64c00,
-  800: #d94400,
-  900: #c13600,
-  contrast: (
-    50: #000,
-    100: #000,
-    200: #000,
-    300: #000,
-    400: #000,
-    500: #000,
-    600: #000,
-    700: #000,
-    800: #000,
-    900: #000,
-  ),
-);

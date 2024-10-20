@@ -1,6 +1,7 @@
 @import "../../../variables";
 
 .social-icons {
+  margin: $container-margin;
   .social-icon {
     margin: $socials-icon-margin;
     font-size: $socials-icon-size;
