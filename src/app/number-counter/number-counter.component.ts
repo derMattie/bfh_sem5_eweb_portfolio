@@ -12,6 +12,7 @@ export class NumberCounterComponent {
   @Input() targetNumber!: number;
   @Input() startNumber: number = 0;
   @Input() duration: number = 3;
+  @Input() grouping: boolean = false;
 
   @ViewChild('counterElement', { static: true }) counterElement!: ElementRef;
 
@@ -24,7 +25,7 @@ export class NumberCounterComponent {
         duration: this.duration, // Set the duration for the counting animation (in seconds)
         startVal: this.startNumber, // Starting value
         useEasing: true, // Smooth animation
-        useGrouping: false, // 1'000 vs 1000
+        useGrouping: this.grouping, // 1'000 vs 1000
       }
     );
 

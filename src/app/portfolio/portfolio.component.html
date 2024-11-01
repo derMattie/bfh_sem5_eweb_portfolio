@@ -15,12 +15,13 @@
   <app-info-card [faInputIcon]="faPersonSwimming">
     <h3>Swimming</h3>
     @if (aareData(); as aareData) {
-    <div>
-      <p>Aare in Thun: {{ aareData.aare }}°</p>
+    <div class="aareguru">
+      <p class="temperature">Aare in Thun: {{ aareData.aare }}°</p>
       <p>{{ aareData.text }}</p>
       <p>Daten von {{ aareData.time * 1000 | date : "dd.MM.yyyy HH:mm" }}</p>
+      <a href="https://aare.guru/#thun" target="_blank">by aare.guru</a>
     </div>
-    <p (click)="updateAareData()" title="Refresh">
+    <p class="refresh" (click)="updateAareData()" title="Refresh">
       <fa-icon [icon]="faRefresh"></fa-icon>
     </p>
     } @else{
@@ -31,14 +32,19 @@
   <app-info-card [faInputIcon]="faMeme">
     <h3>Memes</h3>
     @if(memeData(); as memeData){
-    <div>
-      <img class="meme" [src]="memeData.url" [alt]="memeData.description" />
+    <div class="meme">
+      <a [href]="memeData.url" target="_blank" title="Open source">
+        <img class="image" [src]="memeData.url" [alt]="memeData.description" />
+      </a>
     </div>
-    <p (click)="updateMemeData()" title="Refresh">
+    <p class="refresh" (click)="updateMemeData()" title="Refresh">
       <fa-icon [icon]="faRefresh"></fa-icon>
     </p>
     } @else {
-    <mat-spinner [diameter]="50"></mat-spinner>
+    <div class="spinner">
+      <mat-spinner [diameter]="50"></mat-spinner>
+    </div>
+    <p>Es kann sein, dass das Meme Kontingent für den Tag aufgebraucht ist.</p>
     }
   </app-info-card>
 
@@ -50,8 +56,9 @@
     <h3>Driving</h3>
     <p>Kilometers driven (estimated)</p>
     <app-number-counter
-      [targetNumber]="60000"
+      [targetNumber]="80000"
       [startNumber]="0"
+      [grouping]="true"
     ></app-number-counter>
   </app-info-card>
 

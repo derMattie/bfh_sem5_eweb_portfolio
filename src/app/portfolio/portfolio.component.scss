@@ -9,21 +9,26 @@
   width: 100%;
 }
 
+.aareguru {
+  .temperature {
+    font-weight: bold;
+  }
+}
+
 .meme {
-  width: 200px;
+  width: 100%;
+  .image {
+    width: 300px;
+  }
 }
 
 .spinner {
-  animation: rotate 2s linear infinite;
+  width: 50px;
+  margin: 5px auto;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.refresh {
+  cursor: pointer;
 }
 
 @media (max-width: $media-medium) {

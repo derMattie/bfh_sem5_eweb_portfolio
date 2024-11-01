@@ -3,7 +3,7 @@
 .content-container {
   background-color: $backdrop-component;
   box-shadow: $boxshadow;
-  padding: $container-padding 0;
+  padding: $container-padding 10px;
   border-radius: $border-radius;
   min-width: 25rem;
   flex-grow: 1;
