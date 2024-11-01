@@ -24,6 +24,7 @@ import { MemeService } from '../external-information/meme/meme.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { DatePipe } from '@angular/common';
+import { CareerCardComponent } from '../career-card/career-card.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -35,6 +36,7 @@ import { DatePipe } from '@angular/common';
     Error404Component,
     NumberCounterComponent,
     MatProgressSpinnerModule,
+    CareerCardComponent,
   ],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',

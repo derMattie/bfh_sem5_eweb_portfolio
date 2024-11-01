@@ -8,7 +8,13 @@
 </h2>
 
 <h1>Laufbahn</h1>
-<div class="carrerpath-container"></div>
+<div class="carrerpath-container">
+  <app-career-card
+    [title]="'Requirement Engineer'"
+    [organisation]="'Nexplore AG'"
+    [location]="'Thun'"
+  ></app-career-card>
+</div>
 
 <h1>Things I like</h1>
 <div class="hobby-container">
@@ -62,6 +68,7 @@
       ></app-number-counter>
       Kilometers driven (estimated)
     </p>
+    <p>Since 2017</p>
   </app-info-card>
 
   <app-info-card [faInputIcon]="faSteam">
