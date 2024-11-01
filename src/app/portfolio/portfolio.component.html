@@ -54,12 +54,14 @@
 
   <app-info-card [faInputIcon]="faCar">
     <h3>Driving</h3>
-    <p>Kilometers driven (estimated)</p>
-    <app-number-counter
-      [targetNumber]="80000"
-      [startNumber]="0"
-      [grouping]="true"
-    ></app-number-counter>
+    <p>
+      <app-number-counter
+        [targetNumber]="80000"
+        [startNumber]="0"
+        [grouping]="true"
+      ></app-number-counter>
+      Kilometers driven (estimated)
+    </p>
   </app-info-card>
 
   <app-info-card [faInputIcon]="faSteam">

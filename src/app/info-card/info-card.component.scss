@@ -3,12 +3,17 @@
 .content-container {
   background-color: $backdrop-component;
   box-shadow: $boxshadow;
-  padding: $container-padding 10px;
   border-radius: $border-radius;
   min-width: 25rem;
   flex-grow: 1;
+  height: 100%;
+
+  .card-content {
+    margin: $container-margin;
+  }
 
   .card-icon {
+    margin-top: $container-margin;
     font-size: 4rem;
     color: $accent-primary;
   }
@@ -23,5 +28,10 @@
   .content-container {
     border-radius: 0;
     width: 100%;
+  }
+}
+@media (min-width: $media-medium) {
+  .content-container {
+    width: 400px;
   }
 }
