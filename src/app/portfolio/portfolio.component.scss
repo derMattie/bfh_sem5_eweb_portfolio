@@ -1,8 +1,41 @@
 @import "../../variables";
 
+.intro-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 75%;
+  margin: 5px auto;
+  height: 100vh;
+
+  .image {
+    width: 100%;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .information {
+    width: 100%;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .carrerpath-container {
-  margin-block-start: 50px;
-  margin-block-end: 50px;
+  margin-block-end: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .hobby-container {
@@ -54,5 +87,8 @@
 @media (max-width: $media-medium) {
   .hobby-container {
     flex-direction: column;
+  }
+  .intro-container .image {
+    display: none;
   }
 }

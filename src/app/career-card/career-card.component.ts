@@ -1,17 +1,18 @@
-import { DatePipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-career-card',
   standalone: true,
-  imports: [DatePipe],
+  imports: [],
   templateUrl: './career-card.component.html',
   styleUrl: './career-card.component.scss',
 })
 export class CareerCardComponent {
+  @Input() isLast: boolean = false;
+
   @Input() title!: string;
-  // @Input() startDate!: Date;
-  // @Input() endDate!: Date;
+  @Input() startDate!: string;
+  @Input() endDate!: string;
   @Input() organisation!: string;
   @Input() location: string = 'N/A';
 }

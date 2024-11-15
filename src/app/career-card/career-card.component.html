@@ -1,10 +1,10 @@
 <div class="content-container">
-  <div>
-    <h3>{{ title }}</h3>
-    <!-- <p>
-      {{ startDate | date : "MMM yyyy" }} - {{ endDate | date : "MMM yyyy" }}
-    </p> -->
-    <p>{{ organisation }}</p>
-    <p>{{ location }}</p>
+  <div class="card-content">
+    <h4>{{ title }}</h4>
+    <p>{{ startDate }} - {{ endDate }}</p>
+    <p>{{ organisation }}, {{ location }}</p>
   </div>
 </div>
+@if(!isLast){
+<div class="dashed-line"></div>
+}

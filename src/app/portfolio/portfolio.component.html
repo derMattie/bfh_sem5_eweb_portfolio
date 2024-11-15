@@ -1,22 +1,90 @@
-<h1>Matthias Michel</h1>
-<h2>
-  since
-  <app-number-counter
-    [targetNumber]="1999"
-    [startNumber]="1000"
-  ></app-number-counter>
-</h2>
+<div class="intro-container">
+  <div class="image">
+    <img
+      src="../../assets/images/MiteX_Full_WithBorder.png"
+      alt="Matthias Michel"
+      title="Matthias Michel"
+      width="100%"
+    />
+  </div>
+  <div class="information">
+    <h1>Matthias Michel</h1>
+    <h3>
+      Born in
+      <app-number-counter
+        [targetNumber]="1999"
+        [startNumber]="1000"
+      ></app-number-counter>
+    </h3>
+    <p>
+      Geboren in
+      <app-number-counter
+        [targetNumber]="1999"
+        [startNumber]="1000"
+      ></app-number-counter>
+      , habe ich mein Leben immer mit einem optimistischen Blick nach vorne
+      gerichtet. Meine Mottos „Smile more than others“, „Smile is Style“ und
+      „Neugierde bringt dich weiter“ spiegeln meine Lebensphilosophie wider: Ein
+      Lächeln öffnet Türen, und Neugier treibt mich an, immer Neues zu
+      entdecken.
+    </p>
+    <p>
+      Ich liebe es, Zeit mit meinen Freunden zu verbringen, gemeinsam Spaß zu
+      haben und mich für sie einzusetzen, wenn sie mich brauchen. Neben meiner
+      Leidenschaft für Musik ist es mir wichtig, positive Momente zu schaffen –
+      für mich und mein Umfeld.
+    </p>
+  </div>
+</div>
 
 <h1>Laufbahn</h1>
 <div class="carrerpath-container">
   <app-career-card
+    [title]="'BSc Wirtschaftsinformatik'"
+    startDate="Sep 2022"
+    endDate="Aktuell"
+    [organisation]="'BFH W'"
+    [location]="'Bern'"
+  ></app-career-card>
+  <app-career-card
     [title]="'Requirement Engineer'"
+    startDate="Aug 2024"
+    endDate="Aktuell"
     [organisation]="'Nexplore AG'"
     [location]="'Thun'"
   ></app-career-card>
+  <app-career-card
+    [title]="'Software Engineer'"
+    startDate="Aug 2023"
+    endDate="Jul 2024"
+    [organisation]="'Nexplore AG'"
+    [location]="'Thun'"
+  ></app-career-card>
+  <app-career-card
+    [title]="'Technische Berufsmaturität'"
+    startDate="Aug 2019"
+    endDate="Jul 2021"
+    [organisation]="'GIBB'"
+    [location]="'Bern'"
+  ></app-career-card>
+  <app-career-card
+    [title]="'Software Engineer'"
+    startDate="Sep 2019"
+    endDate="Jul 2023"
+    [organisation]="'WeroSoft AG'"
+    [location]="'Ostermundigen'"
+  ></app-career-card>
+  <app-career-card
+    [title]="'Lehre Informatiker EFZ'"
+    startDate="Aug 2015"
+    endDate="Jul 2019"
+    [organisation]="'Schweizerische Post'"
+    [location]="'Bern'"
+    [isLast]="true"
+  ></app-career-card>
 </div>
 
-<h1>Things I like</h1>
+<h1>Hobbys</h1>
 <div class="hobby-container">
   <app-info-card [faInputIcon]="faPersonSwimming">
     <h3>Swimming</h3>
@@ -52,6 +120,7 @@
     </div>
     <p>Es kann sein, dass das Meme Kontingent für den Tag aufgebraucht ist.</p>
     }
+    <!-- Meme, wenn Meme API zu viele Memes geladen wurden: POV: Your meme contingent is run out. -->
   </app-info-card>
 
   <app-info-card [faInputIcon]="faSpotify">
