@@ -13,7 +13,11 @@ import {
   faRefresh,
   faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
-import { faSpotify, faSteam } from '@fortawesome/free-brands-svg-icons';
+import {
+  faLinkedin,
+  faSpotify,
+  faSteam,
+} from '@fortawesome/free-brands-svg-icons';
 import { Error404Component } from '../error404/error404.component';
 import { NumberCounterComponent } from '../number-counter/number-counter.component';
 import { AareData } from '../external-information/aareguru/aareguru';
@@ -54,6 +58,7 @@ export class PortfolioComponent {
   readonly faMeme = faImage;
   readonly faRefresh = faRefresh;
   readonly faSpinner = faSpinner;
+  readonly faLinkedin = faLinkedin;
 
   readonly aareData = signal<AareData | null>(null);
   readonly memeData = signal<MemeData | null>(null);
