@@ -1,5 +1,10 @@
 @import "../../variables";
 
+.carrerpath-container {
+  margin-block-start: 50px;
+  margin-block-end: 50px;
+}
+
 .hobby-container {
   display: flex;
   flex-direction: row;
@@ -16,10 +21,24 @@
   }
 }
 
-.meme {
+.meme,
+.music {
   width: 100%;
   .image {
     width: 300px;
+  }
+}
+
+.games {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .game-icon {
+    margin: $container-margin;
+    width: 75px;
+    height: auto;
   }
 }
 
