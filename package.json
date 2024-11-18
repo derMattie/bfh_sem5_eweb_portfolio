@@ -7,7 +7,7 @@
     "build": "ng build --base-href /bfh_sem5_eweb_portfolio/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "postbuild": "move docs\\browser\\* docs\\ && rmdir /s /q docs\\browser"
+    "postbuild": "move docs\\browser\\* docs\\ && rmdir /s /q docs\\browser && xcopy src\\assets\\images docs\\assets\\images /E /I"
   },
   "private": true,
   "dependencies": {
