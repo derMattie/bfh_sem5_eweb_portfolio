@@ -55,3 +55,8 @@ body {
     color: $accent-primary;
   }
 }
+
+#particles-js {
+  position: fixed;
+  z-index: 0;
+}
